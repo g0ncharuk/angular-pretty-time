@@ -1,0 +1,19 @@
+
+
+<div>
+  Input hour to decimal:
+  <input type="text" [ngModel]="inputValue | prettyTime: 'decimal'" name="inputValue"
+    [ngModelOptions]="{updateOn:'blur'}" (ngModelChange)="inputValue=$event"/>
+</div>
+
+<div>{{ inputValue | prettyTime: 'decimal' }}</div>
+
+<br><br><br><br>
+
+<div>
+  Input decimal to hour:
+  <input type="text" [ngModel]="inputValue2 | prettyTime: 'hour'" name="inputValue2"
+    [ngModelOptions]="{updateOn:'blur'}" (ngModelChange)="inputValue2=$event"/>
+</div>
+
+<div>{{ inputValue2 | prettyTime: 'hour' }}</div>
